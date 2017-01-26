@@ -1,0 +1,53 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.020019531250002,
+          54.44449176335765
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.448792457580567,
+          48.88876213071536
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jardinière"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.432055473327637,
+          48.8847127085229
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jardinière"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.435628175735474,
+          48.88543231621575
+        ]
+      }
+    }
+  ]
+}
