@@ -1,0 +1,802 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "LimeGreen"
+        },
+        "name": "Bac"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.628677368164063,
+          43.67727884349217
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "LimeGreen"
+        },
+        "name": "Bac"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.621698260307313,
+          43.67515851314308
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "LimeGreen"
+        },
+        "name": "Bac"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.622325897216798,
+          43.67570557718413
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "LimeGreen"
+        },
+        "name": "Bac"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.625807404518128,
+          43.67888310586885
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "LimeGreen"
+        },
+        "name": "Bac"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.629777073860169,
+          43.678557213234946
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "LimeGreen"
+        },
+        "name": "Bac"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.630039930343629,
+          43.6785533335501
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "LimeGreen"
+        },
+        "name": "Bac"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.627073407173158,
+          43.67767263859181
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "LimeGreen"
+        },
+        "name": "Bac"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.628792703151704,
+          43.67728854290989
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "LimeGreen"
+        },
+        "name": "Bac"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.629986286163331,
+          43.67863868655936
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "LimeGreen"
+        },
+        "name": "Bac "
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.626933932304383,
+          43.67771919547709
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "MediumSpringGreen"
+        },
+        "name": "Friche"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.637517929077149,
+              43.69921685619612
+            ],
+            [
+              4.637625217437745,
+              43.699015181727155
+            ],
+            [
+              4.638333320617677,
+              43.699511609968994
+            ],
+            [
+              4.638419151306153,
+              43.6997753358007
+            ],
+            [
+              4.637517929077149,
+              43.69921685619612
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "MediumSpringGreen"
+        },
+        "name": "Friche"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.611961841583253,
+              43.66519409123058
+            ],
+            [
+              4.6124446392059335,
+              43.66507767465669
+            ],
+            [
+              4.612809419631959,
+              43.66482931854453
+            ],
+            [
+              4.612734317779542,
+              43.664503349588024
+            ],
+            [
+              4.611747264862061,
+              43.6648137962534
+            ],
+            [
+              4.611961841583253,
+              43.66519409123058
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "MediumSpringGreen"
+        },
+        "name": "Friche"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.632089138031007,
+              43.6890547217101
+            ],
+            [
+              4.632217884063722,
+              43.688434077552174
+            ],
+            [
+              4.633398056030274,
+              43.68860475533582
+            ],
+            [
+              4.633333683013917,
+              43.689318493532525
+            ],
+            [
+              4.632089138031007,
+              43.6890547217101
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "MediumSpringGreen"
+        },
+        "name": "Friche"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4.630436897277833,
+              43.681994515460744
+            ],
+            [
+              4.631069898605348,
+              43.68206434574487
+            ],
+            [
+              4.631305932998658,
+              43.68184709570511
+            ],
+            [
+              4.631187915802003,
+              43.681699675587225
+            ],
+            [
+              4.630554914474488,
+              43.68163760385028
+            ],
+            [
+              4.630490541458131,
+              43.681870372532714
+            ],
+            [
+              4.630436897277833,
+              43.681994515460744
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Tan"
+        },
+        "name": "Mur végétal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.628816843032838,
+          43.67820804059153
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Tan"
+        },
+        "name": "Mur végétal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.628403782844544,
+          43.67860376943389
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Tan"
+        },
+        "name": "Mur végétalisé"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.627561569213868,
+          43.67730794174066
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Tan"
+        },
+        "name": "Mur végétalisé"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.63249683380127,
+          43.67925555242587
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Tan"
+        },
+        "name": "Mur végétalisé"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.629567861557008,
+          43.67747865118097
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Tan"
+        },
+        "name": "Mur végétalisé"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.630243778228761,
+          43.67899949566626
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Tan"
+        },
+        "name": "Mur végétalisé"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.62802290916443,
+          43.67813820581903
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Tan"
+        },
+        "name": "Mur végétalisé"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.627143144607545,
+          43.67802181435089
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Green"
+        },
+        "name": "Pied d'arbre"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.631729722023011,
+          43.67506151545216
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Green"
+        },
+        "name": "Pied d'arbre"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.631032347679139,
+          43.6752632704732
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Green"
+        },
+        "name": "Pied d'arbre"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.63076949119568,
+          43.675135233711565
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Green"
+        },
+        "name": "Pied d'arbre"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.630565643310548,
+          43.6753020694379
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Green"
+        },
+        "name": "Pied d'arbre"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.630233049392701,
+          43.67517791266245
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Green"
+        },
+        "name": "Pied d'arbre"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.629962146282197,
+          43.67535250805458
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Green"
+        },
+        "name": "Pied d'arbre"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.632158875465394,
+          43.67501883641848
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Green"
+        },
+        "name": "Pied d'arbre"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.629385471343995,
+          43.67539906674003
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Green"
+        },
+        "name": "Pied d'arbre"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.6290233731269845,
+          43.67527297021672
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Green"
+        },
+        "name": "Pied d'arbre"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.631289839744569,
+          43.6750925547303
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Green"
+        },
+        "name": "Pied d'arbre"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.632158875465394,
+          43.67501883641848
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Green"
+        },
+        "name": "Pied d'arbre"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.631729722023011,
+          43.67506151545216
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Green"
+        },
+        "name": "Pied d'arbre"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.631289839744569,
+          43.6750925547303
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Green"
+        },
+        "name": "Pied d'arbre"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.6319442987442025,
+          43.67517791266245
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Green"
+        },
+        "name": "Pied d'arbre"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.63150978088379,
+          43.67522447148337
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Green",
+          "iconClass": "Drop"
+        },
+        "name": "Pied d'arbre"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.62700366973877,
+          43.67934090443624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Green"
+        },
+        "name": "Pied d'arbres"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.6296241879463205,
+          43.675218651632704
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "DarkGoldenRod"
+        },
+        "name": "Pots"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.626241922378541,
+          43.67697428097776
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "DarkGoldenRod"
+        },
+        "name": "Pots"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.627615213394166,
+          43.67893742113574
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "DarkGoldenRod"
+        },
+        "name": "Pots"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.628146290779115,
+          43.67792482128829
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "DarkGoldenRod"
+        },
+        "name": "Pots"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.626059532165528,
+          43.67811104782999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "DarkGoldenRod"
+        },
+        "name": "Pots"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.625410437583924,
+          43.67771531573802
+        ]
+      }
+    }
+  ]
+}

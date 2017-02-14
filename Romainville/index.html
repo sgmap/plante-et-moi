@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Permis de végétaliser</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU"
+		crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.rawgit.com/Pixabay/JavaScript-autoComplete/1.0.4/auto-complete.css" />
+	<link rel="stylesheet" href="css/main.css" />
+
+	<script src="https://cdn.rawgit.com/Pixabay/JavaScript-autoComplete/1.0.4/auto-complete.min.js"></script>
+
+	<style type="text/css">
+		html, body { 
+			margin: 0; 
+			padding: 0; 
+			width: 100%; 
+			height: 100%;
+		}
+		
+		.important {
+			width: 100%;
+			font-size:22px;
+			display: table;
+			padding: 4%;
+			box-sizing:border-box;
+			background-image: url("img/square_jehan_rictus.jpg");
+			background-position: right center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			text-align: center;
+			color: white;
+		}
+
+		@media (max-width: 900px) {
+			.important {
+				font-size: 15px;
+			}
+		}
+
+		.important__text {
+			display: table-cell;
+			vertical-align: middle;
+			line-height: 1.2;
+		}
+		
+		.centered {
+			margin: 0 auto;
+			display: block;
+			position: relative;
+			max-width: 950px;
+			min-width: 400px;
+			padding: 1px 5% 1px 5%;
+			text-align: center;
+		}
+		
+		.form {
+			padding: 1px 0px;
+			background-color: #F3F3F3;
+		}
+		
+		.form--invisible {
+			display: none;
+		}
+		
+		.form__title {
+			padding: 1px 5%;
+			color: #0C518A;
+		}
+		
+		.form__typeform {
+			width: 100%;
+			height: 600px;
+			display: inline-block;
+			border-width: 0px;
+		}
+		
+		.main__title {
+			color: #0C518A;
+		}
+
+
+		.main__title--invisible {
+			display: none !important;
+		}
+		
+
+		.cube {
+			display: inline-block;
+			height: 160px;
+			min-width: 300px; 
+			width:42%; 
+			text-align: center;
+			box-sizing:border-box;
+			margin: 30px;
+			vertical-align: top;
+		}
+
+		.search {
+			display: inline-block;
+			vertical-align: middle;
+			border-radius: 2px;
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+			margin-bottom: 20px;
+		}
+		.search__input {
+			margin: 0px;
+			padding: 10px;
+			width: 500px;
+			height: 50px;
+			font-size: 25px;
+			border-width: 0px;
+			border-radius: 2px 2px 2px 2px;
+			float: left;
+			box-sizing:border-box;
+		}
+		.search__button {
+			margin: 0px;
+			letter-spacing: 0.2px;
+			font-weight: bold;
+			background-color: green;
+			text-decoration: none;
+			transition: none 200ms ease-out;
+			transition-property: color, background;
+			padding: 16px 0px;
+			color: white;
+			font-weight: bold;
+			border-radius: 0px 2px 2px 0px;
+			width: 100px;
+			height: 50px;
+			border-width: 0px;
+			float: left;
+		}
+		.search__button:hover {
+			background-color: seagreen;
+		}
+		.autocomplete-suggestion {
+			font-size: 25px;
+			line-height: 40px;
+		}
+	</style>
+</head>
+
+<body>
+	
+	<div class="header">
+		<div class="header__ribbon">
+			Beta
+		</div>
+		<h1 class="header__title" id="header-title"><i class="fa fa-leaf"></i></h1> 
+	</div>
+	<div class="important">
+		<h1 class="important__text">Jardinez en bas de chez vous<br>pour des rues plus belles, plus vivantes, plus natures</h1>
+	</div>
+
+	<div class="centered" style="
+			color: #0C518A; margin: 20px auto;">
+		<h1 class="main__title" id="search-street-title">Cherchez une rue à végétaliser</h1>
+		 <div class="search">
+			 <input type="text" id="address-search" name="address-search" placeholder="Saisissez une rue ici..." class="search__input">
+			 <button class="search__button" type="button" onclick="manualSearch();" id="search-button">Rechercher</button>
+	     </div>
+	</div>
+
+	<div class="centered">
+		<div class="cube" style="background-image: 
+url('http://media.paperblog.fr/i/748/7484553/creation-dune-rue-jardin-exemple-bordeaux-L-yNfX3N.png'); background-repeat: no-repeat;
+			background-size: cover; border-radius: 2px; 
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+			">
+
+		</div>
+		<div class="cube">
+			<h2 class="main__title">Envie de jardinage ? <br/>Besoin de nature en ville ?</h2>
+			Ça tombe bien : jardiner dans les rues, c’est permis !
+		</div>
+	</div>
+
+	<div class="centered">
+				<div class="cube">
+			<h2 class="main__title">Pas la main verte ?</h2>
+			On vous conseille sur les plantes et leur entretien, même en hiver !
+		</div>
+		<div class="cube" style="background-image: 
+url('http://www.citizenkid.com/application/views/images/media/59/450x350/Enfant-qui-jardine-290229.jpg'); background-repeat: no-repeat;
+			background-size: cover; background-position: center 60%; border-radius: 2px; 
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);">
+		</div>
+		<div class="cube" style="background-image: 
+url('http://www.pariscotejardin.fr/wp-content/P1290992-1024x768.jpg'); background-repeat: no-repeat;
+			background-size: cover; background-position: center center; border-radius: 2px;
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); ">
+		</div>
+		<div class="cube">
+			<h2 class="main__title">Pas le temps ?</h2>
+			Vous pouvez végétaliser en 3 minutes par semaine seulement !
+		</div>
+	</div>
+
+	<script src="js/utils.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+	document.getElementById('search-street-title').innerHTML += ' dans '+city;
+
+	var center;
+	var codePostaux = [];
+	var codeInsee;
+
+    function sendReverseGeocodeRequest(latlng, response){
+    		try { requestReverseGeocode.abort(); } catch(e){}
+			requestReverseGeocode = new XMLHttpRequest();
+			requestReverseGeocode.open('GET', 'https://api-adresse.data.gouv.fr/reverse/?type=housenumber&lon='+latlng.lng+'&lat='+latlng.lat, true);
+    		requestReverseGeocode.onload = function() {
+			  if (requestReverseGeocode.status >= 200 && requestReverseGeocode.status < 400) {
+			    // Success!
+			    var data = JSON.parse(requestReverseGeocode.responseText);
+			    var features = data["features"];
+			    response(data["features"]);
+			  } else {
+			    response([]);
+			  }
+			};
+			requestReverseGeocode.send();
+    }
+
+	var requestReverseGeocode;
+
+	function reverseGeocodeAdress(latlng) {
+		sendReverseGeocodeRequest(latlng, function(features) {
+			selectedAddress = features[0]["properties"]["label"];
+		})
+	}
+
+// Autocomplete
+	function renderFeature(item, search){
+    	var coord = item["geometry"]["coordinates"]
+		return '<div class="autocomplete-suggestion" data-val="' + item["properties"]["label"] + '" data-lat="'+coord[1]+'" data-lng="'+coord[0]+'">' + item["properties"]["label"] + '</div>';
+	}
+
+	function onSelectAddress(event, term, item){
+		var coord = [item.getAttribute("data-lat"),item.getAttribute("data-lng")];
+		var address = item.getAttribute("data-val");
+
+		document.location = 'demande.html?c='+city+'&address='+address+"&lat="+item.getAttribute("data-lat")+"&lng="+item.getAttribute("data-lng");
+	}
+
+	function addressesDataSource(term, response){
+    		try { requestAddresses.abort(); } catch(e){}
+			requestAddresses = new XMLHttpRequest();
+			requestAddresses.open('GET', 'https://api-adresse.data.gouv.fr/search/?type=housenumber&q='+term+'&limit=30&lon='+center[0]+'&lat='+center[1], true);
+    		requestAddresses.onload = function() {
+			  if (requestAddresses.status >= 200 && requestAddresses.status < 400) {
+			    // Success!
+			    var data = JSON.parse(requestAddresses.responseText);
+			    var features = data["features"].filter(function(feature){
+			    	if(codePostaux.indexOf(feature["properties"]["postcode"]) == -1) {
+			    		return false;
+			    	}
+			    	return true;
+			    });
+			    response(features);
+			  } else {
+			    response([]);
+			  }
+			};
+			requestAddresses.send();
+    	}
+
+	var requestAddresses;
+	new autoComplete({
+    	selector: 'input[name=address-search]',
+    	minChars: 2,
+    	source: addressesDataSource,
+    	renderItem: renderFeature,
+		onSelect: onSelectAddress,
+		cache: false,
+	});
+
+	function manualSearch(){
+		document.getElementById('search-button').innerHTML = '<img src="img/spin.gif" style="height: 20px;"/>';
+		var term = document.getElementById('address-search').value;
+		addressesDataSource(term, function(results){
+			var result = results[0];
+			if(result) {
+				var coord = result["geometry"]["coordinates"]
+				document.location = 'demande.html?c='+city+'&address='+result["properties"]["label"] +"&lat="+coord[1]+"&lng="+coord[0];
+			} else {
+				document.getElementById('search-button').innerHTML = 'Rechercher';
+				alert('Nous n\'avons pas trouver votre adresse :(');
+			}
+		})
+	}
+
+</script>
+</body>
+
+</html>
