@@ -8,7 +8,7 @@ body {
     HEADER
 */
 .header {
-    height: 50px;
+    height: 80px;
     line-height: 1;
     padding: 0px;
     margin: 0 auto;
@@ -16,6 +16,14 @@ body {
     position: relative;
     overflow: hidden;
     background-color: seagreen;
+}
+
+.header__image {
+    height: calc(100% - 20px);
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box; 
 }
 
 .header__title {

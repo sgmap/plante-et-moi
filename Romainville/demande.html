@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Permis de végétaliser</title>
+	<title>Jardin'émoi - Romainville</title>
 
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -377,7 +377,8 @@
 		<div class="header__ribbon">
 			Beta
 		</div>
-		<h1 class="header__title" id="header-title"><i class="fa fa-leaf"></i></h1> 
+		<img src="img/logoJEblanc.png" class="header__image">
+		<h1 class="header__title" id="header-title"><i class="fa fa-leaf"></i> Jardin'émoi</h1> 
 	</div>
 
 	<div class="map-container" id="map-container">
@@ -633,7 +634,7 @@
 	function launchForm(type) {
 		projectType = type;
 		var typeform = document.getElementById('typeform');
-		typeform.src = 'https://amazingcontent.typeform.com/to/WNwIJx?type='+projectType+'&address='+selectedAddress+'&city='+city+'&lat='+coord.lat+'&lon='+coord.lng;
+		typeform.src = 'https://amazingcontent.typeform.com/to/ouyQGk?type='+projectType+'&address='+selectedAddress+'&city='+city+'&lat='+coord.lat+'&lon='+coord.lng;
 		var permitForm = document.getElementById('permit__form');
 		permitForm.classList.remove('form--invisible');
 		permitForm.scrollIntoView();

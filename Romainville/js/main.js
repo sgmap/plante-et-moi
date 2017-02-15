@@ -1,16 +1,5 @@
 
-var city = getParameterByName("c");
-if(city == null) {
-	city = "Arles";
-}
-var cityWithParticle;
-if(isVowelOrH(city[0])) {
-	cityWithParticle = "d'"+city;
-} else {
-	cityWithParticle = 'de '+city;
-}
-document.getElementById('header-title').innerHTML += ' Végétalisez '+city;
-document.title += ' - Ville '+cityWithParticle;
+var city = "Romainville";
 	
 var center;
 var codePostaux = [];
