@@ -1,5 +1,5 @@
 @import models._
-@(applications: List[(Application, List[Review])], agent: Agent, numberOfReviews: Int)
+@(applications: List[(Application, List[Review])], agent: Agent, numberOfReviews: Int)(implicit flash: Flash)
 @import java.util.Locale
 
 @main(agent)("Toutes les demandes") {
@@ -10,7 +10,7 @@
 </style>
 }{
 <div class="mdl-cell mdl-cell--12-col pem-container">
-    <table class="mdl-data-table mdl-js-data-table pem-table mdl-shadow--2dp">
+    <table class="mdl-data-table mdl-js-data-table pem-table mdl-shadow--2dp" style="white-space: normal;">
         <thead>
         <tr>
             <th class="mdl-data-table__cell--non-numeric">Adresse</th>
@@ -19,7 +19,6 @@
             <th class="mdl-data-table__cell--non-numeric">Avancement</th>
             <th class="mdl-data-table__cell--non-numeric">Avis</th>
             <th class="mdl-data-table__cell--non-numeric">Type</th>
-            <th class="mdl-data-table__cell--non-numeric">Dossier</th>
         </tr>
         </thead>
         <tbody>
@@ -29,9 +28,8 @@
                 <td class="mdl-data-table__cell--non-numeric">@application.name</td>
                 <td class="mdl-data-table__cell--non-numeric">@application.creationDate.toString("dd MMM YYYY", new Locale("fr"))</td>
                 <td class="mdl-data-table__cell--non-numeric">@application.status</td>
-                <td class="mdl-data-table__cell--non-numeric">@reviews.length / @numberOfReviews</td>
+                <td class="mdl-data-table__cell--non-numeric" style="white-space: nowrap;">@reviews.length / @numberOfReviews</td>
                 <td class="mdl-data-table__cell--non-numeric">@application._type</td>
-                <td class="mdl-data-table__cell--non-numeric">@application.id.substring(0,2)</td>
             </tr>
         }
         </tbody>

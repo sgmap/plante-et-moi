@@ -59,7 +59,7 @@ body {
 
 .steps {
     height: 52px;
-    width: 90%;
+    width: calc(100% - 108px);
     float: right;
 }
 .step {
@@ -152,23 +152,19 @@ color: #adadbb;
     padding-top: 5px;
 }
 
-
 @media (max-width: 900px) {
-    .steps {
-        width: 80%;
-    }
     .step {
         font-size: 15px;
         padding: 20px;
      }
     .step__number {
-        display: none;
+        height: 20px;
     }
 }
 
 @media (max-width: 600px) {
-    .steps {
-        width: 80%;
+    .step__number {
+        display: none;
     }
 }
 

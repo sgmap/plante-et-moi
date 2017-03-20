@@ -12,6 +12,8 @@ case class Application(id: String,
                        address: String,
                        creationDate: DateTime,
                        coordinates: Coordinates,
+                       source: String,
+                       sourceId: String,
                        phone: Option[String] = None,
                        fields: Map[String, String] = Map(),
                        files: List[String] = List()) {

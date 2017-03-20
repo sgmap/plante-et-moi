@@ -161,7 +161,7 @@
 			color: #0C518A; margin: 20px auto; text-align: center; ">
 		<div class="form">
 			<h1 class="main__title">Vous voulez participer à Jardin'émoi ? </h1>
-			<a class="button button--yellow button--shadow" href="projets.html">Choisissez votre projet</a>
+			<a class="button button--yellow button--shadow" href="projets.html" onclick="changeButton()">Cliquez-ici pour choisir votre projet</a>
 		</div>
 	</div>
 
@@ -170,7 +170,6 @@
 url('img/mosaique1.jpg'); background-repeat: no-repeat; 
 		background-position: center left;
 			background-size: cover; border-radius: 2px; 
-			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 			">
 		</div>
 		<div class="cube" style="padding-top: 40px;">
@@ -189,17 +188,16 @@ url('img/mosaique1.jpg'); background-repeat: no-repeat;
 		<div class="cube" style="background-image: 
 url('img/mosaique2.jpg'); background-repeat: no-repeat;
 background-position: center left;
-			background-size: cover; border-radius: 2px; 
-			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);">
+			background-size: cover; border-radius: 2px; ">
 		</div>
 	</div>
 
 	<div class="centered" style="
 			color: #0C518A; margin: 20px auto;">
 			<h1 class="main__title">Vous voulez participer à Jardin'émoi ? </h1>
-			<a class="button button--yellow button--shadow" href="projets.html">Choisissez votre projet</a>
+			<a class="button button--yellow button--shadow" href="projets.html" onclick="changeButton()">Cliquez-ici pour choisir votre projet</a>
 		</div>
-	</div>
+	</div><br><br>
 
 	<div class="footer">
 		<a class="footer__link" href="http://www.developpement-durable.gouv.fr/greentech-verte" target="_blank"><img class="footer__image" src="img/logo_greentech_small.png"></a>
@@ -295,6 +293,11 @@ background-position: center left;
 		cache: false,
 	});
 
+	function changeButton() {
+		Array.from(document.getElementsByClassName('button')).forEach(function(button){
+			button.innerHTML = '<img src="img/spin.gif" style="height: 20px;"/>';
+		})
+	}
 
 	function manualSearch(fieldId){
 		Array.from(document.getElementsByClassName('search-button')).forEach(function(button){

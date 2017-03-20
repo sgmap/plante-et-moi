@@ -1,5 +1,5 @@
 @import models._
-@(city: String, applications: List[(Application, List[Review])], agent: Agent)
+@(city: String, applications: List[(Application, List[Review])], agent: Agent)(implicit flash: Flash)
 @import java.util.Locale
 
 @main(agent)("Carte des projects") {

@@ -44,24 +44,23 @@ class ApplicationService @Inject()(dbapi: DBApi) extends AnormJson with AnormCoo
 
 
   val simple: RowParser[Application] = Macro.parser[Application](
-    "id", "city", "status", "firstname", "lastname", "email", "type", "address", "creation_date", "coordinates", "phone", "fields", "files"
+    "id", "city", "status", "firstname", "lastname", "email", "type", "address", "creation_date", "coordinates", "source", "source_id", "phone", "fields", "files"
   )
 
   def findByApplicationId(applicationId: String) = db.withConnection { implicit connection =>
-    SQL("SELECT * FROM application WHERE id = {id}").on('id -> applicationId).as(simple.singleOpt)
+    SQL("SELECT * FROM application_imported INNER JOIN application_extra ON (application_imported.id = application_extra.application_id) WHERE id = {id} ").on('id -> applicationId).as(simple.singleOpt)
   }
 
-  def insert(application: Application) = db.withConnection { implicit connection =>
+  def insert(application: Application) = db.withTransaction { implicit connection =>
     SQL(
       """
-          INSERT INTO application VALUES (
-            {id}, {city}, {status}, {firstname}, {lastname}, {email}, {type}, {address}, {creation_date}, point({latitude}, {longitude}), {phone}, {fields}, {files}
+          INSERT INTO application_imported VALUES (
+            {id}, {city}, {firstname}, {lastname}, {email}, {type}, {address}, {creation_date}, point({latitude}, {longitude}), {source}, {source_id}, {phone}, {fields},{files}
           )
       """
     ).on(
       'id -> application.id,
       'city -> application.city,
-      'status -> application.status,
       'firstname -> application.firstname,
       'lastname -> application.lastname,
       'email -> application.email,
@@ -70,19 +69,31 @@ class ApplicationService @Inject()(dbapi: DBApi) extends AnormJson with AnormCoo
       'creation_date -> application.creationDate,
       'latitude -> application.coordinates.latitude,
       'longitude -> application.coordinates.longitude,
+      'source -> application.source,
+      'source_id -> application.sourceId,
       'phone -> application.phone,
       'fields -> Json.toJson(application.fields),
       'files -> Json.toJson(application.files)
     ).executeUpdate()
+    SQL(
+      """
+          INSERT INTO application_extra VALUES (
+            {application_id}, {status}
+          ) ON CONFLICT DO NOTHING
+      """
+    ).on(
+      'application_id -> application.id,
+      'status -> application.status
+    ).executeUpdate()
   }
   def findByCity(city: String) = db.withConnection { implicit connection =>
-    SQL("SELECT * FROM application WHERE city = {city} ORDER BY creation_date DESC").on('city -> city).as(simple.*)
+    SQL("SELECT * FROM application_imported INNER JOIN application_extra ON (application_imported.id = application_extra.application_id) WHERE city = {city} ORDER BY creation_date DESC").on('city -> city).as(simple.*)
   }
 
   def updateStatus(id: String, newStatus: String) = db.withConnection { implicit connection =>
-    SQL("UPDATE application SET status = {status} WHERE id = {id}"
+    SQL("UPDATE application_extra SET status = {status} WHERE application_id = {application_id}"
     ).on(
-      'id -> id,
+      'application_id -> id,
       'status -> newStatus
     ).executeUpdate()
   }
