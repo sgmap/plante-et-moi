@@ -103,15 +103,48 @@ class ApplicationController @Inject() (ws: WSClient,
 
 
   def changeCity(newCity: String) = Action { implicit request =>
-    Redirect(routes.ApplicationController.login()).withSession("city" -> newCity.toLowerCase)
+    Redirect(routes.ApplicationController.getLogin()).withSession("city" -> newCity.toLowerCase)
   }
 
   def disconnectAgent() = Action { implicit request =>
-    Redirect(routes.ApplicationController.login()).withSession(request.session - "agentId")
+    Redirect(routes.ApplicationController.getLogin()).withSession(request.session - "agentId")
   }
 
-  def login() = Action { implicit request =>
-    Ok(views.html.login(agents, getCity(request)))
+  def getLogin() = Action { implicit request =>
+    Ok(views.html.login(getCity(request), Left(agents)))
+  }
+
+  def postLogin() = Action { implicit request =>
+    /*
+    val url = s"${routes.ApplicationController.my().absoluteURL()(request)}?key=${agent.key}"
+    val email = Email(
+      s"Connexion",
+      "Plante et Moi <administration@plante-et-moi.fr>",
+      Seq(s"${agent.name} <${agent.email}>"),
+      bodyText = Some(s"""Bonjour ${agent.name},
+                         |
+                    |Nous avons besoin de votre avis pour une demande de végétalisation au ${application.address} (c'est un projet de ${application._type}).
+                         |Vous pouvez voir la demande et laisser mon avis en ouvrant la page suivante:
+                         |${url}
+                         |
+                    |Merci de votre aide,
+                         |Si vous avez des questions, n'hésitez pas à nous contacter en répondant à ce mail""".stripMargin),
+      bodyHtml = Some(
+        s"""<html>
+           |<body>
+           | Bonjour ${agent.name}, <br>
+           | <br>
+           | Nous avons besoin de votre avis pour une demande de végétalisation au ${application.address} <br>
+           | (c'est un projet de ${application._type}).<br>
+           |<a href="${url}">Vous pouvez voir la demande et laisser mon avis en cliquant ici</a><br>
+           | <br>
+           | Merci de votre aide, <br>
+           | Si vous avez des questions, n'hésitez pas à nous contacter en répondant à ce mail
+           |</body>
+           |</html>""".stripMargin)
+    )
+    mailerClient.send(email) */
+    Ok(views.html.login(getCity(request), Right(agents.head)))
   }
 
   case class ReviewData(favorable: Boolean, comment: String)

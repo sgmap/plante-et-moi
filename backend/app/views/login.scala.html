@@ -1,4 +1,4 @@
-@(agents: List[Agent], city: String)
+@(city: String, allAgentsOrLoggedAgent: Either[List[Agent], Agent])
 
 <!doctype html>
 <html lang="fr">
@@ -37,8 +37,8 @@
             margin: 0 auto;
         }
         .login-layout.is-small-screen .demo-content {
-  padding: 40px 28px;
-}
+          padding: 40px 28px;
+        }
 
     </style>
 </head>
@@ -49,26 +49,47 @@
         <div class="login-container mdl-grid">
             <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
             <div class="login-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
-                <h3>Administration @city</h3>
-                @for(agent <- agents) {
-                    <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-cell mdl-cell--12-col" onclick="connexion('@agent.id')">Connexion @agent.qualite.capitalize</a>
+                <h3>Connexion administration @city.capitalize</h3>
+                @allAgentsOrLoggedAgent match {
+                    case Left(agents) => {
+                        <p>Cet espace vous permettras de gérer les demandes de végétalisation</p>
+                        <form action="@routes.ApplicationController.postLogin()" method="post">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="email" name="email">
+                                <label class="mdl-textfield__label" for="email">Votre email...</label>
+                            </div><br>
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                                Connexion
+                            </button>
+                        </form>
+                        <h3>Debug</h3>
+                        @for(agent <- agents) {
+                            <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-cell mdl-cell--12-col" onclick="connexion('@agent.id')">Connexion @agent.qualite.capitalize</a>
+                        }
+                        <script>
+                            var agents = {
+                                @for(agent <- agents) {
+                                   "@agent.id": "@{routes.ApplicationController.all()}?key=@agent.key",
+                                }
+                            }
+
+                            function connexion(agent) {
+                                document.location = agents[agent];
+                            }
+                        </script>
+                    }
+                    case Right(agent) => {
+                        <p>Un email vous a été envoyé à l'adresse <b>@agent.email</b>.<br>Cliquez sur le lien contenu dans ce mail pour accéder aux dossiers.</p>
+                    }
                 }
+                <br>
+                <p><a href="mailto:biodiversite&commat;beta.gouv.fr?subject=Problème%20Plante%20Et%20Moi%20Administration%20Connexion">Vous rencontrez des difficultés à vous connecter ? cliquez-ici pour nous contacter.</a><p></p>
             </div>
         </div>
     </main>
 </div>
 <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-<script>
-    var agents = {
-        @for(agent <- agents) {
-             "@agent.id": "@{routes.ApplicationController.all()}?key=@agent.key",
-        }
-    }
 
-    function connexion(agent) {
-        document.location = agents[agent];
-    }
-</script>
 </body>
 </html>
 

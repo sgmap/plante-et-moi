@@ -13,7 +13,8 @@ GET     /villes/:newCity                                controllers.ApplicationC
 POST    /toutes-les-demandes/:applicationId/reviews     controllers.ApplicationController.addReview(applicationId: String)
 GET     /image                                          controllers.ApplicationController.getImage(url: String)
 POST     /toutes-les-demandes/:id                       controllers.ApplicationController.updateStatus(id: String, status: String)
-GET     /login                                          controllers.ApplicationController.login()
+GET     /login                                          controllers.ApplicationController.getLogin()
+POST    /login                                          controllers.ApplicationController.postLogin()
 GET     /disconnect                                     controllers.ApplicationController.disconnectAgent()
 
 # Map static resources from the /public folder to the /assets URL path

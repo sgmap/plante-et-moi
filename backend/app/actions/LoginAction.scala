@@ -28,7 +28,7 @@ class LoginAction @Inject()(agentService: AgentService) extends ActionBuilder[Re
         case (None, Some(agent)) =>
           Right(new RequestWithAgent(agent, request))
         case _ =>
-          Left(Redirect(routes.ApplicationController.login()).withSession(request.session - "agentId").flashing("message" -> "Vous n'avez pas pu être identifié"))
+          Left(Redirect(routes.ApplicationController.getLogin()).withSession(request.session - "agentId").flashing("message" -> "Vous n'avez pas pu être identifié"))
       }
     }
 
