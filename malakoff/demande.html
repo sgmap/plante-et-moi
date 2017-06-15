@@ -25,11 +25,6 @@
 			height: 100%;
 			overflow-x: hidden;
 		}	
-
-		.centered {
-			margin: 15px auto;
-		}
-		
 		.form {
 			padding: 1px 0px;
    			border: 1px solid #d8d8d8;
@@ -117,11 +112,11 @@
 		}
 		
 		.popup--green .leaflet-popup-content-wrapper {
-			background-color: rgba(114, 175, 38, 0.8);
+			background-color: rgba(0, 0, 0, 0.55);
 		}
 		
 		.popup--green .leaflet-popup-tip {
-			background-color: rgba(114, 175, 38, 0.8);
+			background-color: rgba(0, 0, 0, 0.55);
 		}
 		
 		.galery {
@@ -169,15 +164,18 @@
 		
 		.galery__card__title {
 			position: relative;
-			display: inline-block;
+			display: block;
+			height: 70px;
 			width: 100%;
-			top: -41px;
+			top: -74px;
 			margin: 0px;
 			text-align: center;
 			font-weight: bold;
 			color: white;
-			background: rgba(46,139,87, 0.7);
-			line-height: 1.5;
+			background: rgba(0, 0, 0, 0.55);
+			line-height: 1.3;
+			box-sizing: border-box;
+			padding-top: 3px;
 		}
 		
 		.galery__card__description {
@@ -342,12 +340,12 @@
 </head>
 
 <body>
-<header class="header-application">
-		<div class="header__ribbon">
-			Beta
-		</div>
-		<a href="."><div class="header__image header__image--left"></div></a>
-		<div class="steps steps--3-col">
+<div class="centered">
+	<header class="header-application">
+			<a href="."><div class="header__image header__image--left"></div></a>
+	</header>
+
+	<div class="steps steps--3-col">
 			<div class="step step--current step--arrow" id="step-place" onclick="choosePlace()">
 				<span class="step__number">1</span>   Choisir un lieu
 			</div>
@@ -358,9 +356,6 @@
 				<span class="step__number">3</span>   Faire une demande
 			</div>
 		</div>
-</header>
-
-<div class="centered">
 	<div class="map-container" id="map-container">
 		<div class="map__leaflet" id="map">
 			<!-- <input type="text" id="address-search" name="address-search" placeholder="Rechercher une adresse" class="address-search map__input leaflet-bar leaflet-control">
@@ -371,41 +366,41 @@
 		</div>
 	</div>
 	<div class="galery galery--invisible" id="projectList">
-		<div class="galery__card" onclick="launchForm('projet de jardinière');">
-			<img class="galery__card__image" src="img/jardiniere.jpg"
+		<div class="galery__card" onclick="launchForm('projet de jardinières existantes et pieds d'arbres');">
+			<img class="galery__card__image" src="img/pied_arbre.jpg"
 			/>
 			<h2 class="galery__card__title">Jardinières existantes et pieds d'arbres</h2>
 			<p class="galery__card__description">Adoptez une jardinière ou un pied d'arbre actuellement entretenus par la Ville '
 			</p>
 			<div class="galery__card__bottom">
-				<a class="button button--yellow button--card-bottom">Je demande mon permis</a>
+				<a class="button button--green button--card-bottom">Je demande mon permis</a>
 			</div>
 		</div>
-		<div class="galery__card" onclick="launchForm('projet de croix de Saint-André');"> 
-			<img class="galery__card__image" src="img/rue_vegetalisee_1.jpg" />
-			<h2 class="galery__card__title">Créer une jardinière</h2>
+		<div class="galery__card" onclick="launchForm('projet de créer une jardinière');"> 
+			<img class="galery__card__image" src="img/creer_jardiniere.jpg" />
+			<h2 class="galery__card__title" style="padding-top: 18px;">Créer une jardinière</h2>
 			<p class="galery__card__description">En terre cuite, bois, contenants de récupération… Vous avez le choix mais n’oubliez pas que votre contenant sera installé sur la voie publique. Il doit être stable et ne pas représenter de danger pour les passants. 
 			</p>
 			<div class="galery__card__bottom">
-				<a class="button button--yellow button--card-bottom">Je demande mon permis</a>
+				<a class="button button--green button--card-bottom">Je demande mon permis</a>
 			</div>
 		</div>
-		<div class="galery__card" onclick="launchForm('projet de pied d\'arbre fleuris');">
-			<img class="galery__card__image" src="img/P1040455.jpg" />
+		<div class="galery__card" onclick="launchForm('projet de personnaliser un bout de nos espaces verts);">
+			<img class="galery__card__image" src="img/espace_verts.jpg" />
 			<h2 class="galery__card__title">Personnaliser un bout de nos espaces verts</h2>
 			<p class="galery__card__description">Définissons ensemble l’espace pour votre projet
 			</p>
 			<div class="galery__card__bottom">
-				<a class="button button--yellow button--card-bottom">Je demande mon permis</a>
+				<a class="button button--green button--card-bottom">Je demande mon permis</a>
 			</div>
 		</div>
-		<div class="galery__card" onclick="launchForm('projet de végétalisation');">
+		<div class="galery__card" onclick="launchForm('autre projet');">
 			<img class="galery__card__image" src="img/autre-projet.jpg" />
-			<h2 class="galery__card__title">Autre projet</h2>
+			<h2 class="galery__card__title" style="padding-top: 18px;">Autre projet</h2>
 			<p class="galery__card__description">Une autre idée ? Partagez-la avec nous …
 			</p>
 			<div class="galery__card__bottom">
-				<a class="button button--yellow button--card-bottom">Je demande mon permis</a>
+				<a class="button button--green button--card-bottom">Je demande mon permis</a>
 			</div>
 		</div>
 	</div>
@@ -514,7 +509,7 @@
 						  .addTo(map)
 		function manageResult(address) {
 				selectedAddress = address;
-				selectedPoint.bindPopup('<div style="text-align: center; font-size: 14px; font-weight: bold;">'+selectedAddress+'<a href="javascript:chooseProject();" class="button button--yellow">Choisir mon projet</a></div>',
+				selectedPoint.bindPopup('<div style="text-align: center; font-size: 16px; font-weight: bold; color: white;">'+selectedAddress+'<a href="javascript:chooseProject();" class="button button--green">Choisir mon projet</a></div>',
 						       {autoClose:false, closeButton: false, className: 'popup--green'})
 						  .openPopup();
 		}
