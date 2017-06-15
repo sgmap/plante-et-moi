@@ -47,8 +47,7 @@ html, body {
 h1 {
     color: #641d55;
     font-family: 'Playfair Display',Arial,Verdana,sans-serif;
-    font-size: 2.9em;
-    font-style: italic;
+    font-size: 2.1em;
     line-height: 1.2em;
     letter-spacing: 0.012em;
 }
@@ -56,7 +55,7 @@ h3 {
     text-transform: uppercase;
     color: #000000;
     font-family: 'Dosis',Arial,Verdana,sans-serif;
-    font-size: 1.8em;
+    font-size: 1.7em;
     line-height: 1.2em;
     padding: 10px 0 10px 0;
 }

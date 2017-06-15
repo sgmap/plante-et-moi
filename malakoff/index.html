@@ -69,7 +69,6 @@
 			display: inline-block;
 			vertical-align: middle;
 			border-radius: 2px;
-			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 			margin-bottom: 20px;
 		}
         .form__input {
@@ -79,8 +78,9 @@
 			height: 50px;
 			font-size: 20px;
 			border-width: 0px;
-			border-radius: 2px 2px 2px 2px;
+			border-radius: 2px 2px 0px 0px;
 			box-sizing:border-box;
+            border: 1px solid #3FA435;
 		}
 		.form__button {
 			margin: 0px;
@@ -100,6 +100,7 @@
 			.form__input {
 				float: left;
 				width: 400px;
+			    border-radius: 2px 0px 0px 2px;
 			}
 			.form__button {
 				float: left;
@@ -112,7 +113,7 @@
 		}
 
         .cube__img {
-            width: 90%;
+            width: 70%;
             border-radius: 50%;
             max-width: 300px;
         }        
@@ -140,7 +141,7 @@
          <div class="main">
             <div class="bandeau">
                 <img class="bandeau__image" src="http://www.malakoff.fr/uploads/tx_cimbase/bandeau_cadre_de_vie.jpg">
-                 <h1 style="text-align: center; margin-left: 20px; margin-right: 20px;">​Jardinez en bas de chez vous pour des rues plus belles, plus vivantes, plus naturelles</h1>
+                <h1 style="text-align: center; margin-left: 20px; margin-right: 20px;">​Jardinez en bas de chez vous<br>pour des rues plus belles, plus vivantes, plus naturelles</h1>
                 <div class="form">
                     <h2 style="color: #282D33;">Vous voulez participer à l'opération « Nature en ville » ? <br> Demander votre permis de végétaliser</h2>
                     <div class="form__block" style="margin-top: 10px;">
